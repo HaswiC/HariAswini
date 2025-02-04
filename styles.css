@@ -1,25 +1,29 @@
 /* General Styles */
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Playfair Display', serif;
   color: white;
   overflow-x: hidden;
-  background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* Soft gradient background */
 }
 
-.background-image {
+/* Video Background */
+.video-background {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('https://via.placeholder.com/1920x1080'); /* Replace with your background image URL */
-  background-size: cover;
-  background-position: center;
   z-index: -1;
+  overflow: hidden;
 }
 
-.overlay {
+.video-background video {
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.video-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -51,15 +55,15 @@ header {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 5rem;
   margin-bottom: 10px;
-  font-family: 'Great Vibes', cursive;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-family: 'Dancing Script', cursive;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   animation: slideIn 1.5s ease-in-out;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 20px;
   animation: slideIn 2s ease-in-out;
 }
