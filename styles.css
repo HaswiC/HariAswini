@@ -1,7 +1,7 @@
 /* General Styles */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   color: white;
   overflow-x: hidden;
 }
@@ -18,6 +18,16 @@ body {
   z-index: -1;
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  z-index: -1;
+}
+
 .content {
   position: relative;
   z-index: 1;
@@ -25,9 +35,14 @@ body {
   padding: 20px;
 }
 
+header {
+  padding: 50px 0;
+}
+
 h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   margin-bottom: 10px;
+  font-family: 'Great Vibes', cursive;
 }
 
 h2 {
@@ -35,16 +50,7 @@ h2 {
   margin-bottom: 20px;
 }
 
-.event-details, .live-event, .gallery, .instagram-profiles {
-  margin-bottom: 40px;
-}
-
-.event-details h3, .live-event h3, .gallery h3, .instagram-profiles h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.event-details p, .live-event p {
+p {
   font-size: 1.2rem;
   margin: 5px 0;
 }
@@ -58,7 +64,51 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Gallery Styles */
+/* Event Details Section */
+.event-details {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 40px 0;
+}
+
+.event-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%;
+  margin: 10px;
+  transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+  transform: scale(1.05);
+}
+
+/* Live Event Section */
+.live-event {
+  margin: 40px 0;
+}
+
+.live-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #ffcc00;
+  color: #000;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  transition: background 0.3s ease;
+}
+
+.live-button:hover {
+  background: #e6b800;
+}
+
+/* Gallery Section */
+.gallery {
+  margin: 40px 0;
+}
+
 .gallery-container {
   display: flex;
   overflow-x: auto;
@@ -71,11 +121,42 @@ a:hover {
   height: 200px;
   object-fit: cover;
   border-radius: 10px;
+  transition: transform 0.3s ease;
 }
 
-/* Instagram Profiles */
-.instagram-profiles a {
-  display: block;
-  margin: 10px 0;
+.gallery-container img:hover {
+  transform: scale(1.1);
+}
+
+/* Instagram Section */
+.instagram-profiles {
+  margin: 40px 0;
+}
+
+.instagram-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.instagram-links a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
   font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .event-card {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
 }
