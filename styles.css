@@ -6,7 +6,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Video Background */
+/* Background Video */
 .video-background {
   position: fixed;
   top: 0;
@@ -21,6 +21,7 @@ body {
   min-width: 100%;
   min-height: 100%;
   object-fit: cover;
+  filter: brightness(0.5); /* Darken the video */
 }
 
 .video-overlay {
@@ -29,25 +30,41 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  background: rgba(0, 0, 0, 0.7); /* Dark overlay for better text visibility */
   z-index: -1;
 }
 
+/* Floating Images */
+.floating-image {
+  position: absolute;
+  animation: float 6s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+#floating-image-1 {
+  top: 20%;
+  left: 10%;
+}
+
+#floating-image-2 {
+  top: 40%;
+  right: 10%;
+}
+
+/* Content Sections */
 .content {
   position: relative;
   z-index: 1;
   text-align: center;
   padding: 20px;
-  animation: fadeIn 2s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 header {
@@ -59,101 +76,19 @@ h1 {
   margin-bottom: 10px;
   font-family: 'Dancing Script', cursive;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  animation: slideIn 1.5s ease-in-out;
 }
 
 h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  animation: slideIn 2s ease-in-out;
-}
-
-p {
-  font-size: 1.2rem;
-  margin: 5px 0;
-}
-
-a {
-  color: #ffcc00;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: #e6b800;
-}
-
-/* Event Details Section */
-.event-details {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin: 40px 0;
-}
-
-.event-card {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 20px;
-  border-radius: 15px;
-  width: 30%;
-  margin: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px); /* Frosted glass effect */
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.event-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Live Event Section */
-.live-event {
-  margin: 40px 0;
-}
-
-.live-button {
-  display: inline-block;
-  padding: 10px 20px;
-  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-  color: #000;
-  border-radius: 25px;
-  font-size: 1.2rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.live-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Gallery Section */
-.gallery {
-  margin: 40px 0;
-}
-
 .gallery-container {
   display: flex;
   overflow-x: auto;
   gap: 10px;
   padding: 10px 0;
-  scrollbar-width: thin;
-  scrollbar-color: #ff9a9e #fad0c4;
-}
-
-.gallery-container::-webkit-scrollbar {
-  width: 8px;
-}
-
-.gallery-container::-webkit-scrollbar-thumb {
-  background: #ff9a9e;
-  border-radius: 10px;
-}
-
-.gallery-container::-webkit-scrollbar-track {
-  background: #fad0c4;
 }
 
 .gallery-container img {
@@ -169,40 +104,8 @@ a:hover {
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Instagram Section */
-.instagram-profiles {
-  margin: 40px 0;
-}
-
-.instagram-links {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.instagram-links a {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 1.2rem;
-  padding: 10px 20px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 25px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.instagram-links a:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
-  .event-card {
-    width: 100%;
-  }
-
   h1 {
     font-size: 3rem;
   }
