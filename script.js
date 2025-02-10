@@ -23,3 +23,18 @@ function updateCountdown() {
 
 const interval = setInterval(updateCountdown, 1000);
 updateCountdown();
+
+// Automatically add classes based on image orientation
+document.addEventListener("DOMContentLoaded", function () {
+  const images = document.querySelectorAll(".gallery-container img");
+
+  images.forEach((img) => {
+    img.onload = function () {
+      if (img.naturalWidth > img.naturalHeight) {
+        img.classList.add("horizontal"); // Landscape image
+      } else {
+        img.classList.add("vertical"); // Portrait image
+      }
+    };
+  });
+});
