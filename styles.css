@@ -15,8 +15,6 @@
   position: relative;
   overflow: hidden;
   border: 2px solid #e0d6c3;
-  text-decoration: none; /* Ensure links inside are clickable */
-  display: block; /* Make the entire card a block element */
 }
 
 .event-card::before {
@@ -59,12 +57,15 @@
   color: #e64c3c;
 }
 
+/* Style for links inside event cards */
 .event-card a {
-  color: inherit; /* Inherit color from parent */
+  color: #ff7f50; /* Match the theme color */
   text-decoration: none; /* Remove underline */
-  display: block; /* Make the link cover the entire card */
+  font-weight: bold; /* Make it stand out */
+  transition: color 0.3s ease-in-out;
 }
 
 .event-card a:hover {
-  text-decoration: underline; /* Add underline on hover for links */
+  color: #e64c3c; /* Change color on hover */
+  text-decoration: underline; /* Add underline on hover */
 }
