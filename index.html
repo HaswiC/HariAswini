@@ -5,19 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hari & Aswini's Wedding</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <!-- Background Image -->
+  <!-- Background Image with Overlay -->
   <div class="background-image"></div>
+  <div class="overlay"></div>
 
   <!-- Main Content -->
-  <div class="container">
+  <div class="content">
+    <!-- Header Section -->
     <header>
       <h1>Hari & Aswini</h1>
-      <p>We are getting married!</p>
+      <h2>We are getting married!</h2>
+      <p>Join us in celebrating our love</p>
     </header>
 
-    <!-- Countdown Timer -->
+ <!-- Countdown Timer -->
     <div class="countdown">
       <h2>Countdown to the Big Day</h2>
       <div id="timer">
@@ -28,53 +32,41 @@
       </div>
     </div>
 
-    <!-- Event Details -->
-    <div class="events">
-      <div class="event" data-event="engagement">
-  <div class="event-content">
-    <h3>Engagement</h3>
-    <p>Date: 16th February 2025</p>
-    <p>Time: 7:00 PM onwards</p>
-    <p>📍 <a href="https://www.google.com/maps?q=QMVH+8R+Tiruchirappalli,+Tamil+Nadu" target="_blank">View Location</a></p>
-  </div>
-</div>
-
-      <div class="event" data-event="marriage">
-        <div class="event-content">
-          <h3>Marriage</h3>
-          <p>📅 17th February 2025</p>
-          <p>⌚ 4:30 AM to 6:00 AM</p>
-          <p>Marriage @ <a href="https://www.google.com/maps/place/Kaattu+Azhagiya+Singar+Temple,+Srirangam/@10.8601524,78.6962539,702m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3baaf5d5bc07798f:0xdc6ebbf767389235!8m2!3d10.8601471!4d78.6988288!16s%2Fm%2F0gw_hz5?entry=ttu&g_ep=EgoyMDI1MDEyOS4xIKXMDSoASAFQAw%3D%3D" target="_blank">Kaattu Azhagiya Singar Temple, Srirangam</a>.</p>
-        </div>
+    <!-- Event Details Section -->
+    <section class="event-details">
+      <div class="event-card">
+        <h3>Wedding</h3>
+        <p>📅 17-Feb-2025</p>
+        <p>⏰ 4:30 AM to 6:00 AM</p>
+        <p>📍 <a href="https://www.google.com/maps/place/Kaattu+Azhagiya+Singar+Temple,+Srirangam/@10.8601524,78.6962539,702m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3baaf5d5bc07798f:0xdc6ebbf767389235!8m2!3d10.8601471!4d78.6988288!16s%2Fm%2F0gw_hz5?entry=ttu&g_ep=EgoyMDI1MDEyOS4xIKXMDSoASAFQAw%3D%3D" target="_blank">Kaattu Azhagiya Singar Temple, Srirangam</a></p>
       </div>
-      <div class="event" data-event="reception">
-        <div class="event-content">
-          <h3>Reception</h3>
-          <p>📅 16th February 2025</p>
-          <p>⌚ 9:00 PM onwards</p>
-          <p>📍 <a href="https://www.google.com/maps/place/Rail+Mahal/@10.7933784,78.6769333,702m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3baaf56212d5e06d:0x97e9d72bfdc5b966!8m2!3d10.7933731!4d78.6795082!16s%2Fg%2F11rtrfhkt2?entry=ttu&g_ep=EgoyMDI1MDEyOS4xIKXMDSoASAFQAw%3D%3D" target="_blank">Rail Mahal</a>.</p>
-        </div>
+
+      <div class="event-card">
+        <h3>Reception</h3>
+        <p>📅 16-Feb-2025</p>
+        <p>⏰ 9:00 PM onwards</p>
+        <p>📍 <a href="https://www.google.com/maps/place/Rail+Mahal/@10.7933784,78.6769333,702m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3baaf56212d5e06d:0x97e9d72bfdc5b966!8m2!3d10.7933731!4d78.6795082!16s%2Fg%2F11rtrfhkt2?entry=ttu&g_ep=EgoyMDI1MDEyOS4xIKXMDSoASAFQAw%3D%3D" target="_blank">Rail Mahal</a></p>
       </div>
-    </div>
 
-    <!-- Live Event -->
-    <div class="live-event">
-      <h2>Live Event</h2>
-      <p>Watch our wedding live on <a href="https://www.youtube.com/live/Fbc_C-zmQbU?si=XFUzglbWXxL9oVaI" target="_blank">YouTube</a>.</p>
-    </div>
+      <div class="event-card">
+        <h3>Engagement</h3>
+        <p>📅 16-Feb-2025</p>
+        <p>⏰ 7:00 PM onwards</p>
+        <p>📍 <a href="https://www.google.com/maps/place/Rail+Mahal/@10.7933784,78.6769333,702m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3baaf56212d5e06d:0x97e9d72bfdc5b966!8m2!3d10.7933731!4d78.6795082!16s%2Fg%2F11rtrfhkt2?entry=ttu&g_ep=EgoyMDI1MDEyOS4xIKXMDSoASAFQAw%3D%3D" target="_blank">Rail Mahal</a></p>
+      </div>
+    </section>
 
-    <!-- Instagram Profiles -->
-    <div class="instagram"> 
-      <h2>Follow Us</h2>
-      <p>Check out our Instagram profiles:</p>
-      <a href="https://www.instagram.com/hari_chandra_sekar?igsh=YXIzZndrdjY2ZnE4" target="_blank"> 🕺Hari's Instagram</a> |
-      <a href="https://www.instagram.com/ashwini_jayaraj?igsh=MTVtazl6dTIwd2Ixbg==" target="_blank"> 💃Aswini's Instagram</a>
-    </div>
+    <!-- Live Event Section -->
+    <section class="live-event">
+      <h3>Live Event</h3>
+      <p>Watch the live stream on YouTube:</p>
+      <a href="https://www.youtube.com/@OneWayKadhal" target="_blank" class="live-button">Watch Live</a>
+    </section>
 
-    <!-- Image Gallery -->
-    <div class="gallery">
-      <h2>Gallery</h2>
-      <div class="scrollable-gallery">
+    <!-- Gallery Section -->
+    <section class="gallery">
+      <h3>Gallery</h3>
+      <div class="gallery-container">
         <img src="https://raw.githubusercontent.com/HaswiC/HariAswini/main/images/6.jpg" alt="Hari">
         <img src="https://raw.githubusercontent.com/HaswiC/HariAswini/main/images/5.jpg" alt="Hari">
         <img src="https://raw.githubusercontent.com/HaswiC/HariAswini/main/images/7.jpg" alt="Hari">
@@ -86,12 +78,18 @@
         <img src="https://raw.githubusercontent.com/HaswiC/HariAswini/main/images/15.jpg" alt="Hari">
         <img src="https://raw.githubusercontent.com/HaswiC/HariAswini/main/images/16.jpg" alt="Hari">
         <img src="https://raw.githubusercontent.com/HaswiC/HariAswini/main/images/17.jpg" alt="Hari">
-        
       </div>
-    </div>
-  </div>
+    </section>
 
-  <!-- JavaScript -->
-  <script src="script.js"></script>
+    <!-- Instagram Section -->
+    <section class="instagram-profiles">
+      <h3>Follow Us</h3>
+      <div class="instagram-links">
+        <a href="https://www.instagram.com/hari_chandra_sekar?igsh=YXIzZndrdjY2ZnE4" target="_blank"> 🕺Hari's Instagram</a> |
+      <a href="https://www.instagram.com/ashwini_jayaraj?igsh=MTVtazl6dTIwd2Ixbg==" target="_blank"> 💃Aswini's Instagram</a>
+
+      </div>
+    </section>
+  </div>
 </body>
 </html>
