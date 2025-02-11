@@ -230,3 +230,14 @@ header p {
 .instagram-links a:hover {
   color: #e64c3c;
 }
+
+/* Add these new styles for image orientation */
+.gallery-container img.horizontal {
+  width: 300px;
+  height: 200px;
+}
+
+.gallery-container img.vertical {
+  width: 200px;
+  height: 300px;
+}
